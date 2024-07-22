@@ -2,13 +2,20 @@ package com.example.converter
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.SharingStarted
+import com.example.currencies.api.models.Currency
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 class ConverterViewModel(private val getCurrenciesUseCase: GetCurrenciesUseCase) : ViewModel() {
 
-    val state: StateFlow<State> = getCurrenciesUseCase()
-        .stateIn(viewModelScope, SharingStarted.Lazily, State.None)
+    private val _state: MutableStateFlow<State> = MutableStateFlow(State.None)
+    val state: StateFlow<State> = _state
+
+    fun getCurrencies(currency: Currency) {
+        viewModelScope.launch(Dispatchers.IO) {
+            _state.value = getCurrenciesUseCase(currency)
+        }
+    }
 }

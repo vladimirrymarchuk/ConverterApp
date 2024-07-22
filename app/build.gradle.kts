@@ -15,6 +15,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_KEY", "\"https://v6.exchangerate-api.com/v6\"")
+        buildConfigField("String", "API_BASE_URL", "\"d5894079a1ea4958014be16c\"")
     }
 
     buildTypes {
@@ -33,9 +36,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    implementation(project(":data:currencies"))
+    implementation(project(":features:converter"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,4 +55,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //DI
+    implementation(libs.koin.android.v360wasmalpha2)
+    implementation(libs.koin.core.jvm)
+    implementation(libs.koin.test)
 }

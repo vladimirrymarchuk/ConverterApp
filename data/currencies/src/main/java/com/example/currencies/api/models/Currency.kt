@@ -1,328 +1,488 @@
 package com.example.currencies.api.models
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
 
 enum class Currency {
-    @SerialName("AED")
+    @SerializedName("AED")
     AED,
-    @SerialName("AFN")
+
+    @SerializedName("AFN")
     AFN,
-    @SerialName("ALL")
+
+    @SerializedName("ALL")
     ALL,
-    @SerialName("AMD")
+
+    @SerializedName("AMD")
     AMD,
-    @SerialName("ANG")
+
+    @SerializedName("ANG")
     ANG,
-    @SerialName("AOA")
+
+    @SerializedName("AOA")
     AOA,
-    @SerialName("ARS")
+
+    @SerializedName("ARS")
     ARS,
-    @SerialName("AUD")
+
+    @SerializedName("AUD")
     AUD,
-    @SerialName("AWG")
+
+    @SerializedName("AWG")
     AWG,
-    @SerialName("AZN")
+
+    @SerializedName("AZN")
     AZN,
-    @SerialName("BAM")
+
+    @SerializedName("BAM")
     BAM,
-    @SerialName("BBD")
+
+    @SerializedName("BBD")
     BBD,
-    @SerialName("BDT")
+
+    @SerializedName("BDT")
     BDT,
-    @SerialName("BGN")
+
+    @SerializedName("BGN")
     BGN,
-    @SerialName("BHD")
+
+    @SerializedName("BHD")
     BHD,
-    @SerialName("BIF")
+
+    @SerializedName("BIF")
     BIF,
-    @SerialName("BMD")
+
+    @SerializedName("BMD")
     BMD,
-    @SerialName("BND")
+
+    @SerializedName("BND")
     BND,
-    @SerialName("BOB")
+
+    @SerializedName("BOB")
     BOB,
-    @SerialName("BRL")
+
+    @SerializedName("BRL")
     BRL,
-    @SerialName("BSD")
+
+    @SerializedName("BSD")
     BSD,
-    @SerialName("BTN")
+
+    @SerializedName("BTN")
     BTN,
-    @SerialName("BWP")
+
+    @SerializedName("BWP")
     BWP,
-    @SerialName("BYN")
+
+    @SerializedName("BYN")
     BYN,
-    @SerialName("BZD")
+
+    @SerializedName("BZD")
     BZD,
-    @SerialName("CAD")
+
+    @SerializedName("CAD")
     CAD,
-    @SerialName("CDF")
+
+    @SerializedName("CDF")
     CDF,
-    @SerialName("CHF")
+
+    @SerializedName("CHF")
     CHF,
-    @SerialName("CLP")
+
+    @SerializedName("CLP")
     CLP,
-    @SerialName("CNY")
+
+    @SerializedName("CNY")
     CNY,
-    @SerialName("COP")
+
+    @SerializedName("COP")
     COP,
-    @SerialName("CRC")
+
+    @SerializedName("CRC")
     CRC,
-    @SerialName("CUP")
+
+    @SerializedName("CUP")
     CUP,
-    @SerialName("CVE")
+
+    @SerializedName("CVE")
     CVE,
-    @SerialName("CZK")
+
+    @SerializedName("CZK")
     CZK,
-    @SerialName("DJF")
+
+    @SerializedName("DJF")
     DJF,
-    @SerialName("DKK")
+
+    @SerializedName("DKK")
     DKK,
-    @SerialName("DOP")
+
+    @SerializedName("DOP")
     DOP,
-    @SerialName("DZD")
+
+    @SerializedName("DZD")
     DZD,
-    @SerialName("EGP")
+
+    @SerializedName("EGP")
     EGP,
-    @SerialName("ERN")
+
+    @SerializedName("ERN")
     ERN,
-    @SerialName("ETB")
+
+    @SerializedName("ETB")
     ETB,
-    @SerialName("EUR")
+
+    @SerializedName("EUR")
     EUR,
-    @SerialName("FJD")
+
+    @SerializedName("FJD")
     FJD,
-    @SerialName("FKP")
+
+    @SerializedName("FKP")
     FKP,
-    @SerialName("FOK")
+
+    @SerializedName("FOK")
     FOK,
-    @SerialName("GBP")
+
+    @SerializedName("GBP")
     GBP,
-    @SerialName("GEL")
+
+    @SerializedName("GEL")
     GEL,
-    @SerialName("GGP")
+
+    @SerializedName("GGP")
     GGP,
-    @SerialName("GHS")
+
+    @SerializedName("GHS")
     GHS,
-    @SerialName("GIP")
+
+    @SerializedName("GIP")
     GIP,
-    @SerialName("GMD")
+
+    @SerializedName("GMD")
     GMD,
-    @SerialName("GNF")
+
+    @SerializedName("GNF")
     GNF,
-    @SerialName("GTQ")
+
+    @SerializedName("GTQ")
     GTQ,
-    @SerialName("GYD")
+
+    @SerializedName("GYD")
     GYD,
-    @SerialName("HKD")
+
+    @SerializedName("HKD")
     HKD,
-    @SerialName("HNL")
+
+    @SerializedName("HNL")
     HNL,
-    @SerialName("HRK")
+
+    @SerializedName("HRK")
     HRK,
-    @SerialName("HTG")
+
+    @SerializedName("HTG")
     HTG,
-    @SerialName("HUF")
+
+    @SerializedName("HUF")
     HUF,
-    @SerialName("IDR")
+
+    @SerializedName("IDR")
     IDR,
-    @SerialName("ILS")
+
+    @SerializedName("ILS")
     ILS,
-    @SerialName("IMP")
+
+    @SerializedName("IMP")
     IMP,
-    @SerialName("INR")
+
+    @SerializedName("INR")
     INR,
-    @SerialName("IQD")
+
+    @SerializedName("IQD")
     IQD,
-    @SerialName("IRR")
+
+    @SerializedName("IRR")
     IRR,
-    @SerialName("ISK")
+
+    @SerializedName("ISK")
     ISK,
-    @SerialName("JEP")
+
+    @SerializedName("JEP")
     JEP,
-    @SerialName("JMD")
+
+    @SerializedName("JMD")
     JMD,
-    @SerialName("JOD")
+
+    @SerializedName("JOD")
     JOD,
-    @SerialName("JPY")
+
+    @SerializedName("JPY")
     JPY,
-    @SerialName("KES")
+
+    @SerializedName("KES")
     KES,
-    @SerialName("KGS")
+
+    @SerializedName("KGS")
     KGS,
-    @SerialName("KHR")
+
+    @SerializedName("KHR")
     KHR,
-    @SerialName("KID")
+
+    @SerializedName("KID")
     KID,
-    @SerialName("KMF")
+
+    @SerializedName("KMF")
     KMF,
-    @SerialName("KRW")
+
+    @SerializedName("KRW")
     KRW,
-    @SerialName("KWD")
+
+    @SerializedName("KWD")
     KWD,
-    @SerialName("KYD")
+
+    @SerializedName("KYD")
     KYD,
-    @SerialName("KZT")
+
+    @SerializedName("KZT")
     KZT,
-    @SerialName("LAK")
+
+    @SerializedName("LAK")
     LAK,
-    @SerialName("LBP")
+
+    @SerializedName("LBP")
     LBP,
-    @SerialName("LKR")
+
+    @SerializedName("LKR")
     LKR,
-    @SerialName("LRD")
+
+    @SerializedName("LRD")
     LRD,
-    @SerialName("LSL")
+
+    @SerializedName("LSL")
     LSL,
-    @SerialName("LYD")
+
+    @SerializedName("LYD")
     LYD,
-    @SerialName("MAD")
+
+    @SerializedName("MAD")
     MAD,
-    @SerialName("MDL")
+
+    @SerializedName("MDL")
     MDL,
-    @SerialName("MGA")
+
+    @SerializedName("MGA")
     MGA,
-    @SerialName("MKD")
+
+    @SerializedName("MKD")
     MKD,
-    @SerialName("MMK")
+
+    @SerializedName("MMK")
     MMK,
-    @SerialName("MNT")
+
+    @SerializedName("MNT")
     MNT,
-    @SerialName("MOP")
+
+    @SerializedName("MOP")
     MOP,
-    @SerialName("MRU")
+
+    @SerializedName("MRU")
     MRU,
-    @SerialName("MUR")
+
+    @SerializedName("MUR")
     MUR,
-    @SerialName("MVR")
+
+    @SerializedName("MVR")
     MVR,
-    @SerialName("MWK")
+
+    @SerializedName("MWK")
     MWK,
-    @SerialName("MXN")
+
+    @SerializedName("MXN")
     MXN,
-    @SerialName("MYR")
+
+    @SerializedName("MYR")
     MYR,
-    @SerialName("MZN")
+
+    @SerializedName("MZN")
     MZN,
-    @SerialName("NAD")
+
+    @SerializedName("NAD")
     NAD,
-    @SerialName("NGN")
+
+    @SerializedName("NGN")
     NGN,
-    @SerialName("NIO")
+
+    @SerializedName("NIO")
     NIO,
-    @SerialName("NOK")
+
+    @SerializedName("NOK")
     NOK,
-    @SerialName("NPR")
+
+    @SerializedName("NPR")
     NPR,
-    @SerialName("NZD")
+
+    @SerializedName("NZD")
     NZD,
-    @SerialName("OMR")
+
+    @SerializedName("OMR")
     OMR,
-    @SerialName("PAB")
+
+    @SerializedName("PAB")
     PAB,
-    @SerialName("PEN")
+
+    @SerializedName("PEN")
     PEN,
-    @SerialName("PGK")
+
+    @SerializedName("PGK")
     PGK,
-    @SerialName("PHP")
+
+    @SerializedName("PHP")
     PHP,
-    @SerialName("PKR")
+
+    @SerializedName("PKR")
     PKR,
-    @SerialName("PLN")
+
+    @SerializedName("PLN")
     PLN,
-    @SerialName("PYG")
+
+    @SerializedName("PYG")
     PYG,
-    @SerialName("QAR")
+
+    @SerializedName("QAR")
     QAR,
-    @SerialName("RON")
+
+    @SerializedName("RON")
     RON,
-    @SerialName("RSD")
+
+    @SerializedName("RSD")
     RSD,
-    @SerialName("RUB")
+
+    @SerializedName("RUB")
     RUB,
-    @SerialName("RWF")
+
+    @SerializedName("RWF")
     RWF,
-    @SerialName("SAR")
+
+    @SerializedName("SAR")
     SAR,
-    @SerialName("SBD")
+
+    @SerializedName("SBD")
     SBD,
-    @SerialName("SCR")
+
+    @SerializedName("SCR")
     SCR,
-    @SerialName("SDG")
+
+    @SerializedName("SDG")
     SDG,
-    @SerialName("SEK")
+
+    @SerializedName("SEK")
     SEK,
-    @SerialName("SGD")
+
+    @SerializedName("SGD")
     SGD,
-    @SerialName("SHP")
+
+    @SerializedName("SHP")
     SHP,
-    @SerialName("SLE")
+
+    @SerializedName("SLE")
     SLE,
-    @SerialName("SOS")
+
+    @SerializedName("SOS")
     SOS,
-    @SerialName("SRD")
+
+    @SerializedName("SRD")
     SRD,
-    @SerialName("SSP")
+
+    @SerializedName("SSP")
     SSP,
-    @SerialName("STN")
+
+    @SerializedName("STN")
     STN,
-    @SerialName("SYP")
+
+    @SerializedName("SYP")
     SYP,
-    @SerialName("SZL")
+
+    @SerializedName("SZL")
     SZL,
-    @SerialName("THB")
+
+    @SerializedName("THB")
     THB,
-    @SerialName("TJS")
+
+    @SerializedName("TJS")
     TJS,
-    @SerialName("TMT")
+
+    @SerializedName("TMT")
     TMT,
-    @SerialName("TND")
+
+    @SerializedName("TND")
     TND,
-    @SerialName("TOP")
+
+    @SerializedName("TOP")
     TOP,
-    @SerialName("TRY")
+
+    @SerializedName("TRY")
     TRY,
-    @SerialName("TTD")
+
+    @SerializedName("TTD")
     TTD,
-    @SerialName("TVD")
+
+    @SerializedName("TVD")
     TVD,
-    @SerialName("TWD")
+
+    @SerializedName("TWD")
     TWD,
-    @SerialName("TZS")
+
+    @SerializedName("TZS")
     TZS,
-    @SerialName("UAH")
+
+    @SerializedName("UAH")
     UAH,
-    @SerialName("UGX")
+
+    @SerializedName("UGX")
     UGX,
-    @SerialName("USD")
+
+    @SerializedName("USD")
     USD,
-    @SerialName("UYU")
+
+    @SerializedName("UYU")
     UYU,
-    @SerialName("UZS")
+
+    @SerializedName("UZS")
     UZS,
-    @SerialName("VES")
+
+    @SerializedName("VES")
     VES,
-    @SerialName("VND")
+
+    @SerializedName("VND")
     VND,
-    @SerialName("VUV")
+
+    @SerializedName("VUV")
     VUV,
-    @SerialName("WST")
+
+    @SerializedName("WST")
     WST,
-    @SerialName("XAF")
+
+    @SerializedName("XAF")
     XAF,
-    @SerialName("XCD")
+
+    @SerializedName("XCD")
     XCD,
-    @SerialName("XDR")
+
+    @SerializedName("XDR")
     XDR,
-    @SerialName("XOF")
+
+    @SerializedName("XOF")
     XOF,
-    @SerialName("XPF")
+
+    @SerializedName("XPF")
     XPF,
-    @SerialName("YER")
+
+    @SerializedName("YER")
     YER,
-    @SerialName("ZAR")
+
+    @SerializedName("ZAR")
     ZAR,
-    @SerialName("ZMW")
+
+    @SerializedName("ZMW")
     ZMW,
-    @SerialName("ZWL")
+
+    @SerializedName("ZWL")
     ZWL,
 }

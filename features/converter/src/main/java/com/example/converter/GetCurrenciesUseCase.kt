@@ -1,12 +1,13 @@
 package com.example.converter
 
-import com.example.currencies.api.models.CurrenciesResponse
+import android.util.Log
+import com.example.currencies.api.models.Currency
 import com.example.currencies.repository.ApiRepository
-import com.example.currencies.repository.RequestResult
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 
 class GetCurrenciesUseCase(private val repository: ApiRepository) {
-
-    operator fun invoke(): Flow<State> = repository.getCurrencies().map { it.toState() }
+    suspend operator fun invoke(currency: Currency): State {
+        val response = repository.getCurrencies(currency)
+        Log.i("usecase", (response.data?.conversionRates ?: "Error").toString())
+        return response.toState()
+    }
 }

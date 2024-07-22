@@ -19,3 +19,4 @@ fun <T : Any> Result<T>.toRequestResult(): RequestResult<T> = when {
     isSuccess -> RequestResult.Success(data = getOrThrow())
     else -> RequestResult.Error()
 }
+
