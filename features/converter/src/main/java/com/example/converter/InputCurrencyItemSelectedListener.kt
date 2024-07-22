@@ -2,13 +2,12 @@ package com.example.converter
 
 import android.view.View
 import android.widget.AdapterView
-import android.widget.Toast
+import com.example.currencies.api.models.Currency
 
 class InputCurrencyItemSelectedListener(private val viewModel: ConverterViewModel): AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         if (parent != null) {
-            //viewModel.getCurrencies(parent.selectedItem as Currency)
-            Toast.makeText(parent.context, "input", Toast.LENGTH_SHORT).show()
+            viewModel.getCurrencies(Currency.RUB)
         }
     }
 
