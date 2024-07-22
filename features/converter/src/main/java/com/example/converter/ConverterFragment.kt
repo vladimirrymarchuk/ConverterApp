@@ -69,11 +69,16 @@ class ConverterFragment : Fragment() {
                         }
 
                         is State.Error -> {
-                            Toast.makeText(
+                            val errorMessage = Toast.makeText(
                                 context,
                                 "Ошибка: проверте подключение к интернету или перезапустите приложение",
                                 Toast.LENGTH_LONG
-                            ).show()
+                            )
+
+                            errorMessage.show()
+                            button.setOnClickListener {
+                                errorMessage.show()
+                            }
                         }
 
                         is State.Success -> {

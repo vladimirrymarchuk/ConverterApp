@@ -15,7 +15,8 @@ class ConverterViewModel(private val getCurrenciesUseCase: GetCurrenciesUseCase)
 
     fun getCurrencies(currency: Currency) {
         viewModelScope.launch(Dispatchers.IO) {
-            _state.value = getCurrenciesUseCase(currency)
+            //_state.value = getCurrenciesUseCase(currency)
+            _state.value = State.Error
         }
     }
 }
