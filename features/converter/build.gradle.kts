@@ -66,4 +66,5 @@ dependencies {
     implementation(libs.koin.android.v360wasmalpha2)
     implementation(libs.koin.core.jvm)
     implementation(libs.koin.test)
+    implementation(kotlin("reflect"))
 }

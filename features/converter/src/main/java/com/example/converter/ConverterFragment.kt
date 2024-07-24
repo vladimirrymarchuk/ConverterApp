@@ -83,16 +83,14 @@ class ConverterFragment : Fragment() {
 
                         is State.Success -> {
                             button.setOnClickListener {
-                                outputSum.text = (input.text.toString()
-                                    .toLong() * state.data.conversionRates.usd).toString()
+                                val property = state.data.conversionRates::class.members.size
+                                outputSum.text = "${input.text.toString().toLong() * state.data.conversionRates.usd}"
                             }
                         }
                     }
                 }
             }
-
         }
-
     }
 
     override fun onDestroy() {
