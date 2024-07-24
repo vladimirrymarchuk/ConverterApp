@@ -22,6 +22,8 @@ class ConverterFragment : Fragment() {
 
     private val viewModel: ConverterViewModel by viewModel()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -64,27 +66,27 @@ class ConverterFragment : Fragment() {
             lifecycleScope.launch {
                 viewModel.state.collect { state ->
                     when (state) {
-                        is State.None -> {
-
-                        }
-
-                        is State.Error -> {
+                        State.Error -> {
                             val errorMessage = Toast.makeText(
                                 context,
-                                "Ошибка: проверте подключение к интернету или перезапустите приложение",
-                                Toast.LENGTH_LONG
+                                "Ошибка, проверьте подключение к интернету",
+                                Toast.LENGTH_SHORT
                             )
-
                             errorMessage.show()
                             button.setOnClickListener {
                                 errorMessage.show()
                             }
                         }
 
+                        State.None -> {
+
+                        }
+
                         is State.Success -> {
                             button.setOnClickListener {
-                                val property = state.data.conversionRates::class.members.size
-                                outputSum.text = "${input.text.toString().toLong() * state.data.conversionRates.usd}"
+                                outputSum.text =
+                                    ((state.data.conversionRates[spnOutputCurrency.selectedItem.toString()]
+                                        ?: 0.0) * inputSum.text.toString().toDouble()).toString()
                             }
                         }
                     }

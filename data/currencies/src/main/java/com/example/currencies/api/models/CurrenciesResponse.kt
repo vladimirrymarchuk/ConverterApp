@@ -1,18 +1,16 @@
 package com.example.currencies.api.models
 
-import com.example.currencies.api.utils.ConversionRatesDTOSerializer
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
 class CurrenciesResponse(
-    @SerialName("result") val result: String,
-    @SerialName("documentation") val documentation: String,
-    @SerialName("terms_of_use") val termsOfUse: String,
-    @SerialName("time_last_update_unix") val timeLastUpdateUnix: Long,
-    @SerialName("time_last_update_utc") val timeLastUpdateUtc: String,
-    @SerialName("time_next_update_unix") val timeNextUpdateUnix: Long,
-    @SerialName("time_next_update_utc") val timeNextUpdateUtc: String,
-    @SerialName("base_code") val baseCode: String,
-    @SerialName("conversion_rates") @Serializable(with = ConversionRatesDTOSerializer::class) val conversionRates: ConversionRatesDTO
+    @SerializedName("result") val result: String,
+    @SerializedName("documentation") val documentation: String,
+    @SerializedName("terms_of_use") val termsOfUse: String,
+    @SerializedName("time_last_update_unix") val timeLastUpdateUnix: Long,
+    @SerializedName("time_last_update_utc") val timeLastUpdateUtc: String,
+    @SerializedName("time_next_update_unix") val timeNextUpdateUnix: Long,
+    @SerializedName("time_next_update_utc") val timeNextUpdateUtc: String,
+    @SerializedName("base_code") val baseCode: String,
+    @SerializedName("conversion_rates") val conversionRates: Map<String, Double>
 )

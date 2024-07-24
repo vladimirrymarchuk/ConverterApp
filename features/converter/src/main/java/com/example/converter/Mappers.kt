@@ -1,9 +1,7 @@
 package com.example.converter
 
 import android.util.Log
-import com.example.converter.models.ConversionRates
 import com.example.converter.models.CurrenciesUi
-import com.example.currencies.api.models.ConversionRatesDTO
 import com.example.currencies.api.models.CurrenciesResponse
 import com.example.currencies.repository.RequestResult
 
@@ -16,10 +14,6 @@ fun RequestResult<CurrenciesResponse>.toState(): State {
 }
 
 fun CurrenciesResponse.toCurrenciesUi(): CurrenciesUi = CurrenciesUi(
-    baseCode = baseCode.toString(),
-    conversionRates = conversionRates.toConversionRates()
+    baseCode = baseCode,
+    conversionRates = conversionRates
 )
-
-fun ConversionRatesDTO.toConversionRates(): ConversionRates {
-    TODO("Not implemented")
-}

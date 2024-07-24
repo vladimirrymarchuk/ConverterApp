@@ -16,8 +16,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "API_KEY", "\"https://v6.exchangerate-api.com/v6\"")
-        buildConfigField("String", "API_BASE_URL", "\"d5894079a1ea4958014be16c\"")
+        buildConfigField("String", "API_KEY", "\"d5894079a1ea4958014be16c\"")
+        buildConfigField("String", "API_BASE_URL", "\"https://v6.exchangerate-api.com/v6\"")
     }
 
     buildTypes {
