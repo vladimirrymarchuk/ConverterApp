@@ -7,7 +7,7 @@ import com.example.currencies.api.models.Currency
 class InputCurrencyItemSelectedListener(private val viewModel: ConverterViewModel): AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         if (parent != null) {
-            viewModel.getCurrencies(Currency.RUB)
+            viewModel.getCurrencies(Currency.entries.toTypedArray()[position])
         }
     }
 

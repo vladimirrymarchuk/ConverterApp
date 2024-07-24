@@ -10,7 +10,7 @@ class ApiRepository(private val apiService: ApiService) {
     suspend fun getCurrencies(
         currency: Currency = Currency.RUB
     ) : CurrenciesResponse{
-        return apiService.getCurrencies()//.toRequestResult()
+        return apiService.getCurrencies(currency)//.toRequestResult()
     }
 
 }

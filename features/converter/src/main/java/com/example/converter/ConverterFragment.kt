@@ -2,6 +2,7 @@ package com.example.converter
 
 import android.R
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,7 @@ class ConverterFragment : Fragment() {
 
     private var binding: FragmentConverterBinding? = null
 
-    private val inputCurrencyList = Currency.entries.toTypedArray()
+    private var inputCurrencyList = Currency.entries.toTypedArray()
 
     private val viewModel: ConverterViewModel by viewModel()
 
@@ -83,6 +84,7 @@ class ConverterFragment : Fragment() {
                         }
 
                         is State.Success -> {
+                            Log.i("flow", state.data.toString())
                             button.setOnClickListener {
                                 outputSum.text =
                                     ((state.data.conversionRates[spnOutputCurrency.selectedItem.toString()]
