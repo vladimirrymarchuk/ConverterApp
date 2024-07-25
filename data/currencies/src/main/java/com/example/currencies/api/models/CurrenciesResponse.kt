@@ -1,8 +1,10 @@
 package com.example.currencies.api.models
 
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
 
+@Serializable
 class CurrenciesResponse(
     @SerializedName("result") val result: String,
     @SerializedName("documentation") val documentation: String,

@@ -16,6 +16,5 @@ dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
     implementation(libs.converter.gson)
-
-
+    implementation(libs.retrofit.adapters.result)
 }
